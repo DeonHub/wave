@@ -85,4 +85,11 @@ def career(request):
 
     return render(request, template_name, {
         
-    })   
+    }) 
+
+def documentation(request):
+    template_name = 'client/documentation.html'
+
+    return render(request, template_name, {
+        
+    })      

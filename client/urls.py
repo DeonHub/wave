@@ -6,15 +6,16 @@ app_name = 'client'
 urlpatterns = [
     path('', views.index, name="index"),
     path('index-top-menu/', views.index_top_menu, name="index_top_menu"),
-    path('index-video', views.index_video, name="index_video"),
-    path('showcase', views.showcase, name="showcase"),
-    path('wave', views.wave, name="wave"),
-    path('services', views.services, name="services"),
-    path('news', views.news, name="news"),
-    path('news-detail', views.news_detail, name="news_detail"),
-    path('work-detail', views.work_detail, name="work_detail"),
-    path('contact', views.contact, name="contact"),
-    path('career', views.career, name="career"),
+    path('index-video/', views.index_video, name="index_video"),
+    path('showcase/', views.showcase, name="showcase"),
+    path('wave/', views.wave, name="wave"),
+    path('services/', views.services, name="services"),
+    path('news/', views.news, name="news"),
+    path('news-detail/', views.news_detail, name="news_detail"),
+    path('work-detail/', views.work_detail, name="work_detail"),
+    path('contact/', views.contact, name="contact"),
+    path('career/', views.career, name="career"),
+    path('documentation/', views.documentation, name="documentation"),
 
 
 
