@@ -4,7 +4,10 @@ from .models import *
 
 # Register your models here.
 @admin.register( 
-User
+User,
+Image,
+Video,
+Verifications
     )
 
 class AppAdmin(admin.ModelAdmin):

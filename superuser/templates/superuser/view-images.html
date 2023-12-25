@@ -1,0 +1,99 @@
+{% extends 'superuser/base.html' %}
+{% load static %}
+{% block style %}
+ 
+{% endblock %}
+
+{% block content %}
+
+
+<main class="main-content border-radius-lg">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" data-scroll="true">
+      <div class="container-fluid py-1 px-3 bg-white rounded mt-3">
+        <nav aria-label="breadcrumb">
+          <h2 class="font-weight-bolder mb-0">Images</h2>
+        </nav>
+
+        <div class="float mt-3">
+            <a href="{% url 'superuser:addImage' %}"><button class="btn btn-primary rounded-lg">Add Image<i class="material-icons" style="font-size: 1.5em;">add_circle</i></button></a>
+        </div>
+        
+
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+
+            <ul class="navbar-nav  justify-content-end">
+              <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                  <div class="sidenav-toggler-inner">
+                    <i class="sidenav-toggler-line"></i>
+                    <i class="sidenav-toggler-line"></i>
+                    <i class="sidenav-toggler-line"></i>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+      </div>
+    </nav>
+
+    <!-- End Navbar -->
+
+
+
+    <div class="container-fluid bg-white rounded  p-4 m-4">
+        <div class="container-md sm-p-10 md-p-8">
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                {% csrf_token %}
+
+                {% for image in images %}
+                <div class="col" id="{{ image.id }}">
+                    <div class="rounded overflow-hidden shadow bg-white position-relative">
+                        <a href="#"></a>
+                
+                        <div class="position-relative">
+                            <img class="img-fluid object-cover" src="{{ image.image_file.url }}" alt="placeholder">
+                            <div class="edit-delete-overlay d-flex flex-column position-absolute top-0 start-0 w-100 h-100 justify-content-center align-items-center text-center text-white transition-1000">
+                                
+                                <div class="" >
+                                    <p class="text-2xl fw-bold text-white transition-500 inline-block">{{ image.image_name }}</p>
+                                </div>
+
+                               <div>
+                                <a href="{% url 'superuser:editImage' id=image.id %}" class="m-1">
+                                    <button class="btn btn-sm btn-danger rounded-2">
+                                        <i class="material-icons" style="font-size: 1.5em;">edit</i>
+                                    </button>
+                                </a>
+                                <a href="{% url 'superuser:deleteImage' id=image.id %}" class="item-delete" id="{{ image.id }}">
+                                    <button class="btn btn-sm btn-primary rounded-2">
+                                        <i class="material-icons" style="font-size: 1.5em;">delete</i>
+                                    </button>
+                                </a>
+                               </div>
+                                    
+                                
+                                
+                            </div>
+                        </div>
+                
+                    </div>
+                </div>
+                {% endfor %}
+                
+    
+            </div>
+    
+        </div>
+    </div>
+            
+
+
+</main>
+ 
+
+
+{% endblock %}

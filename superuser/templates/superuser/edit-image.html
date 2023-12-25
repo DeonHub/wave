@@ -1,0 +1,102 @@
+{% extends 'superuser/base.html' %}
+{% load static %}
+{% block style %}
+ 
+{% endblock %}
+
+{% block content %}
+
+
+<main class="main-content border-radius-lg">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" data-scroll="true">
+      <div class="container-fluid py-1 px-3 bg-white rounded mt-3">
+        <nav aria-label="breadcrumb">
+          <h2 class="font-weight-bolder mb-0">Edit Image Details</h2>
+        </nav>
+
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+
+            <ul class="navbar-nav  justify-content-end">
+              <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                  <div class="sidenav-toggler-inner">
+                    <i class="sidenav-toggler-line"></i>
+                    <i class="sidenav-toggler-line"></i>
+                    <i class="sidenav-toggler-line"></i>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+      </div>
+    </nav>
+
+    <!-- End Navbar -->
+
+
+    <div class="container-fluid bg-white rounded  p-4 m-4">
+        
+
+            <div class="content shadow sm-p-10 md-p-8">
+
+                <form role="form" class="px-5 py-5" action="" method="post" enctype="multipart/form-data">
+
+                  {% csrf_token %}
+
+                    <div class="input-group input-group-outline mb-3">
+                      <label class="form-label">Image name</label>
+                      <input type="text" class="form-control" name="image_name" value="{{ image.image_name }}" required>
+                    </div>
+                    
+
+                    <div class="input-group input-group-outline mb-3">
+                      <input type="file" class="form-control" id="logo" name="image_file" accept="image/png, .jpeg, .jpg, image/gif" onclick="getLogo()">
+                    </div>
+
+                    
+                    <div class="logo-preview mb-4" id="logo-preview" >
+                      <img src="" alt="logo-preview" class="logo-image" width="" heigth="" style="margin-left:-5%;">
+                      <span class="logo-text">Image Preview</span>
+                  </div>
+
+                  <div class="form-check form-check-info text-start ps-0">
+                      <input class="form-check-input" type="checkbox" id="banner" name="banner" onchange="displayContent(this)" {% if image.banner %} checked {% endif %}>
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Set as Banner
+                      </label>
+                  </div>
+
+
+                  <div id="banner_content" class="banner_content">
+                    <div class="input-group input-group-outline mb-3">
+                      <label class="form-label">Heading</label>
+                      <input type="text" class="form-control" name="heading" value="{{ image.heading }}">
+                    </div>
+
+                    <div class="input-group input-group-outline mb-3">
+                      <label class="form-label">Subheading</label>
+                      <input type="text" class="form-control" name="subheading" value="{{ image.subheading }}">
+                    </div>
+                  </div>
+                  
+
+
+                    
+                    <div class="text-center">
+                      <a onclick="window.history.go(-1); return false;"><button type="button" class="btn bg-gradient-primary rounded-1 btn-sm mt-4 mb-0">Back</button></a>
+                      <a href=""><button type="submit" id="submit" class="btn bg-gradient-secondary rounded-1 btn-sm mt-4 mb-0">Save</button></a>
+                    </div>
+                  </form>
+                  
+
+            </div>
+
+    </div>
+
+</main>
+ 
+
+{% endblock %}

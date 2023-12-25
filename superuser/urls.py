@@ -5,26 +5,24 @@ app_name = 'superuser'
 
 urlpatterns = [
     path('', views.dashboard, name="dashboard"),
+    
+    # Images
+    path('images/', views.viewImages, name="viewImages"),
+    path('add-image/', views.addImage, name="addImage"),
+    path('edit-image/<int:id>/', views.editImage, name='editImage'),
+    path('delete-image/<int:id>', views.deleteImage, name='deleteImage'),
 
-    # # Cardios
-    # path('add-cardiologists/', views.createCardio, name="createCardio"),
-    # path('view-cardiologists/', views.viewCardios, name="viewCardios"),
-    # path('view-cardiologist-details/<int:pk>', views.viewCardioDetails, name="viewCardioDetails"),
-    # path('edit-cardiologist-details/<int:id>/', views.editCardioDetails, name='editCardioDetails'),
-    # path('delete-cardiologist/<int:id>', views.deleteCardio, name='deleteCardio'),
+    # Videos
+    path('videos/', views.viewVideos, name="viewVideos"),
+    path('add-video/', views.addVideo, name="addVideo"),
+    path('edit-video/<int:id>/', views.editVideo, name='editVideo'),
+    path('delete-video/<int:id>', views.deleteVideo, name='deleteVideo'),
 
-    #  # Hospitals
-    # path('view-hospitals/', views.viewHospitals, name="viewHospitals"),
-    # path('view-hospital-details/<int:pk>', views.viewHospitalDetails, name="viewHospitalDetails"),
-    # path('delete-hospital/<int:id>', views.deleteHospital, name='deleteHospital'),
 
-    # path('purchase-history/', views.purchaseHistory, name="purchaseHistory"),
-    # path('view-purchase-details/<int:pk>', views.viewPurchaseDetails, name="viewPurchaseDetails"),
+    path('profile/', views.profile, name="profile"),
+    
+    path('reset-password/', views.resetPassword, name="resetPassword"),
 
-    # path('report-history/', views.reportHistory, name="reportHistory"),
-    # path('view-report-details/<int:pk>', views.viewReportDetails, name="viewReportDetails"),
-    # path('reset-password/', views.resetPassword, name="resetPassword"),
-
-    # path('logout/', views.user_logout, name='user_logout'),
+    path('logout/', views.user_logout, name='user_logout'),
 
 ]

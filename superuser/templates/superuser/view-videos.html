@@ -1,0 +1,100 @@
+{% extends 'superuser/base.html' %}
+{% load static %}
+{% block style %}
+ 
+{% endblock %}
+
+{% block content %}
+
+
+<main class="main-content border-radius-lg">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" data-scroll="true">
+      <div class="container-fluid py-1 px-3 bg-white rounded mt-3">
+        <nav aria-label="breadcrumb">
+          <h2 class="font-weight-bolder mb-0">Videos</h2>
+        </nav>
+
+        <div class="float mt-3">
+            <a href="{% url 'superuser:addVideo' %}"><button class="btn btn-primary rounded-lg">Add Video<i class="material-icons" style="font-size: 1.5em;">add_circle</i></button></a>
+        </div>
+        
+
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+
+            <ul class="navbar-nav  justify-content-end">
+              <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                  <div class="sidenav-toggler-inner">
+                    <i class="sidenav-toggler-line"></i>
+                    <i class="sidenav-toggler-line"></i>
+                    <i class="sidenav-toggler-line"></i>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+      </div>
+    </nav>
+
+    <!-- End Navbar -->
+
+
+    <div class="container-fluid bg-white rounded  p-4 m-4">
+        <div class="container-md sm-p-10 md-p-8">
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                {% csrf_token %}
+                <!-- CARD 1 -->
+                {% for video in videos %}
+                <div class="col" id="{{ video.id }}">
+                    <div class="rounded overflow-hidden shadow bg-white">
+                    <a href="#"></a>
+
+                    <div class="position-relative">
+                        <video src="{{ video.video_file }}" class="w-100 h-50 object-cover video-player" controls>
+                            Your browser does not support the video tag.
+                        </video>
+
+
+                    </div>
+
+                    <div class="px-3 py-2 mb-auto">
+                        <p class="text-lg fw-bold text-dark transition-500 inline-block mb-2">{{ video.video_name }}</p>
+                    </div>
+
+                    <div class="border-bottom border-dark mx-3"></div>
+
+                    <div class="px-3 py-2 d-flex flex-row justify-content-between bg-white">
+
+                        <span class="py-1 mb-3 text-sm mt-0 d-flex align-items-center">
+                            <i class="material-icons" style="font-size: 1.5em;">table_view</i>
+                            <span class="ms-1 text-sm font-light">{{ video.date_uploaded|date:'jS F, Y' }}</span>
+                        </span>
+
+                        <span class="py-1 text-sm d-flex align-items-center">
+                            <a href="{% url 'superuser:editVideo' id=video.id %}" class="m-1"><button class="btn btn-sm btn-danger rounded-2"><i class="material-icons" style="font-size: 1.5em;">edit</i></button></a>
+                            <a href="{% url 'superuser:deleteVideo' id=video.id %}" class="item-delete" id="{{ video.id }}"><button class="btn btn-sm btn-primary rounded-2"><i class="material-icons" style="font-size: 1.5em;">delete</i></button></a>
+                        </span>
+        
+                    </div>
+
+                    </div>
+                </div>
+                {% endfor %}
+
+    
+            </div>
+    
+        </div>
+    </div>
+            
+
+
+</main>
+ 
+
+
+{% endblock %}

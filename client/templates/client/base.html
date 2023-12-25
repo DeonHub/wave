@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     {% load static %}
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,7 +51,11 @@
 <!-- end transition-overlay -->
 <div class="navigation" role="navigation">
   <div class="video-bg hidden-sm hidden-xs">
+    {% if video %}
+    <video src="{{ video.video_file }}" muted autoplay loop></video>
+    {% else %}
     <video src="{% static 'client/videos/video.mp4' %}" muted autoplay loop></video>
+    {% endif %}
   </div>
   <!-- end video-bg -->
   <div class="table">
@@ -69,7 +74,7 @@
           <li><a href="{% url 'client:services' %}" class="transition">SERVICES</a></li>
           <li><a href="{% url 'client:news' %}" class="transition">NEWS</a></li>
           <li><a href="{% url 'client:contact' %}" class="transition">CONTACT</a></li>
-          <li><a href="{% url 'login:index' %}" class="transition">LOGIN</a></li>
+          <li><a href="{% url 'login:login' %}" class="transition">LOGIN</a></li>
         </ul>
       </nav>
       <span class="copyright">© 2023 Wave | Agency & Freelancer Portfolio</span> </div>
@@ -81,7 +86,7 @@
 <nav class="navbar navbar-default" role="navigation">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12"> <a href="#"><img src="{% static 'client/images/logo.png' %}" alt="Image" class="logo"></a>
+      <div class="col-xs-12"> <a href="{% url 'client:index' %}"><img src="{% static 'client/images/logo.png' %}" alt="Image" class="logo"></a>
         <div class="hamburger-menu"> <span></span> <span></span> <span></span> <span></span> </div>
       </div>
       <!-- end col-12 --> 
