@@ -1,0 +1,61 @@
+{% extends 'client/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<section class="int-header" style="background:url(images/project-detail-hero.jpg) center; background-size:cover;">
+  <div class="table">
+    <div class="inner">
+      <div class="container">
+        <h3>vegae e cAm</h3>
+        <p>Agency that brings ambitious brands to the next level by transforming their digital business.</p>
+        <img src="{% static 'client/images/icon-mouse.png' %}" alt="Image"> </div>
+      <!-- end container --> 
+    </div>
+    <!-- end inner --> 
+  </div>
+  <!-- end table --> 
+</section>
+<!-- end int-header -->
+<main>
+  <section class="project-detail">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 wow fadeInUp" data-wow-delay="0.05s">
+          <h4>TECHNOLOGY</h4>
+          <p>HTML 5, CSS, CSS Transition, jQuery, Php, MySQL</p>
+        </div>
+        <!-- end col-5 -->
+        <div class="col-md-3 wow fadeInUp" data-wow-delay="0.10s">
+          <h4>URL</h4>
+          <p>www.yahoo.com </p>
+          
+        </div>
+        <!-- end col-3 -->
+        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.15s">
+          <h4>CLIENTS</h4>
+          <p>E-Cam digital oculus company ltd.</p>
+        </div>
+        <!-- end col-4 --> 
+        <div class="col-xs-12 spacing wow fadeInUp">
+        <h4>DESCRIPTION</h4>
+        <p>The goal of design was to provide direction for the new wearable device. Emotion is designed to take advantage of the EEG technology will develop further in the future. It is able to detect the moment while listening to music touched, and record the environment emotion of the moment received. The saved video recordings can be shared with others.</p>
+        </div>
+      <!-- end col-12 -->
+        <div class="col-xs-12 spacing wow fadeInUp">
+      	<img src="{% static 'client/images/mockup-macbook.png' %}" alt="Image" class="full-width">
+      </div>
+      <!-- end col-12 -->
+      <div class="col-xs-12 text-center spacing wow fadeInUp">
+      	<img src="{% static 'client/images/mockup-iphone.png' %}" alt="Image">
+      </div>
+      <!-- end col-12 -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!--end container -->
+  </section>
+  <!-- end project-detail -->
+</main>
+
+{% endblock %}

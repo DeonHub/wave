@@ -1,0 +1,178 @@
+{% extends 'superuser/base.html' %}
+{% load static %}
+{% block style %}
+ 
+{% endblock %}
+
+{% block content %}
+
+
+<main class="main-content border-radius-lg">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" data-scroll="true">
+      <div class="container-fluid py-1 px-3 bg-white rounded mt-3">
+        <nav aria-label="breadcrumb">
+          <h2 class="font-weight-bolder mb-0">Upload Video</h2>
+        </nav>
+
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+
+            <ul class="navbar-nav  justify-content-end">
+              <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                  <div class="sidenav-toggler-inner">
+                    <i class="sidenav-toggler-line"></i>
+                    <i class="sidenav-toggler-line"></i>
+                    <i class="sidenav-toggler-line"></i>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+      </div>
+    </nav>
+
+    <!-- End Navbar -->
+
+
+    <div class="container-fluid bg-white rounded  p-4 m-4">
+        
+
+            <div class="content shadow sm-p-10 md-p-8">
+
+                <form id="videoForm" class="px-5 py-5" action="" method="post" enctype="multipart/form-data" >
+
+                  {% csrf_token %}
+
+                    <div class="input-group input-group-outline mb-3">
+                      <label class="form-label">Video name</label>
+                      <input type="text" class="form-control" name="video_name" id="video_name" required>
+                    </div>
+                    
+                    <div class="input-group input-group-outline mb-3">
+                      <input type="file" class="form-control" id="video-file"  accept="video/*" onclick="getVideo()" required>
+                  </div>
+
+
+                  <input type="text" id="video_file" name="video_file" value="" hidden>
+              
+                  <div class="video-preview" id="video-preview">
+                      <video src="" class="video-player" controls>
+                          Your browser does not support the video tag.
+                      </video>
+                  </div>
+
+
+
+                    <div class="form-check form-check-info text-start ps-0">
+                        <input class="form-check-input" type="checkbox" id="banner" name="banner">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Set as Hero
+                        </label>
+                    </div>
+                    
+                    <div class="text-center">
+                      <a onclick="window.history.go(-1); return false;"><button type="button" class="btn bg-gradient-primary rounded-1 btn-sm mt-4 mb-0">Back</button></a>
+                      <button class="btn bg-gradient-success rounded-1 btn-sm mt-4 mb-0">Save and Add another</button>
+                      <button onclick="uploadVideo()" type="button" id="submit" class="btn bg-gradient-secondary rounded-1 btn-sm mt-4 mb-0">Save</button>
+                    </div>
+                  </form>
+                  
+
+            </div>
+
+    </div>
+            
+
+
+</main>
+ 
+
+{% endblock %}
+
+{% block script %}
+<script>
+
+
+async function uploadVideo() {
+
+
+  const videoFile = document.getElementById('video-file').files[0];
+  
+  if (videoFile) {
+    const cloudName = 'bloody123';
+    const url = `https://api.cloudinary.com/v1_1/${cloudName}/video/upload`;
+    const video_name = document.getElementById('video_name').value;
+    const bannerCheckbox = document.getElementById('banner');
+    const isBannerChecked = bannerCheckbox.checked;
+
+    if(isBannerChecked){
+      const banner = true;
+    }else{
+      const banner = false;
+    }
+
+
+    const video_url = "{% url 'superuser:addVideo' %}"
+    const csrf = document.querySelector('input[name=csrfmiddlewaretoken]').value;
+
+    const formData = new FormData();
+    formData.append('file', videoFile);
+    formData.append('upload_preset', 'inventory_system');
+
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+
+        const data = await response.json();
+        const video_file = data['url'];
+
+        fetch(video_url, {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+              "X-CSRFToken": csrf
+          },
+          body: JSON.stringify({
+              video_name,
+              video_file,
+              banner,
+              csrfmiddlewaretoken: csrf
+          })
+          })
+          .then(response => {
+              return response;
+              console.log(response.json())
+          })
+          .then(resp => {
+            alert("Video uploaded successfully");
+            window.location.href = "{% url 'superuser:viewVideos' %}";
+          })
+          .catch(error => {
+              console.error('Error:', error);
+              // Handle non-JSON response or other errors here
+          });
+
+      } else {
+        console.error('Error uploading video:', response.statusText);
+        alert("Error uploading image. Please try again")
+      }
+    } catch (error) {
+      console.error('Error uploading video:', error);
+      alert("Error uploading image. Please try again")
+    }
+  } else {
+    console.error('No video file selected.');
+    alert("No video file selected")
+  }
+}
+
+</script>
+
+{% endblock %}

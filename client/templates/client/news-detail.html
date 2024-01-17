@@ -1,0 +1,52 @@
+{% extends 'client/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<section class="int-header hero4">
+  <div class="table">
+    <div class="inner">
+      <div class="container">
+        <h3>wave news</h3>
+        <p>Drop by for a coffee or leave us a message using contact form</p>
+        <img src="{% static 'client/images/icon-mouse.png' %}" alt="Image"> </div>
+      <!-- end container --> 
+    </div>
+    <!-- end inner --> 
+  </div>
+  <!-- end table --> 
+</section>
+<!-- end int-header -->
+<main>
+  <section class="news">
+  	<div class="container">
+    	<div class="row">
+        	<div class="col-xs-12">
+            	<div class="news-post">
+                	<figure><img src="{% static 'client/images/news1.jpg' %}" alt="Image"></figure>
+                    <figcaption>
+                    <small>16TH OCTOBER 2015</small>
+                    	<h3>Slack x Harves</h3>
+                        <p>When Edition 7L, Karl Lagerfeld’s copublishing arm with Steidl, unveiled Grace: Thirty Years of Fashion at Vogue in 2002, the fashionable world went wild. With a limited print run, bookshop shelves around the world were denuded at lightning speed of this celebration of Vogue’s revered—and indefatigable—Creative Director’s epic fashion essays, which included unforgettable collaborations with photographers including Bruce Weber, Helmut Newton, Ellen von Unwerth, and Arthur Elgort. Today, copies available online start at $1,750 and rise to a giddying $10,000.</p>
+                        <blockquote>
+                        Grace Coddington Fans, Rejoice: Her Epic Thirty Years of Fashion Book Is Reprinted!
+                        </blockquote>
+                        <p>“I thought that was a little overpriced,” says Coddington, laughing. And so she persuaded Phaidon to reprint the book exactly as it appeared back in the day (and for the less-swoon-inducing sum of $150). Already planned for next year: a companion volume of post-2002 material containing some of Coddington’s most beloved shoots, including Annie Leibovitz’s December 2003 “Alice in Wonderland” portfolio starring Natalia Vodianova, along with Grace’s work with Steven Klein, David Sims, Craig McDean, and Steven Meisel. Make space on your bookshelves now.</p>
+                        <p>When Cindy Crawford docks her powerboat at a lakeside convenience store in a tiny Canadian village, grabs a few homemade cinnamon doughnuts, then speeds off into a perfect July afternoon, it’s hard not to think of the iconic 1991 Pepsi commercial in which the model emerged from a red Lamborghini to quench her thirst at a gas-station vending machine.</p>
+                        <p>But in this quiet summer community in central Ontario, where seven years ago she and her husband, Rande Gerber, built a house on a granite island blanketed in soft moss and studded with wild blueberry bushes, Cindy would prefer to be as underwhelming as her natural gifts allow. For about a month every summer, she wears no makeup, she makes no plans, she sits hour after uninterrupted hour on the dock or takes “granny swims,” as she calls them, with the friends she sees here but nowhere else, their husbands circling protectively on their paddleboards. “You’re the real you up here,” she explains as Rande’s Wakesetter carves through the sparkling lake. “You never have your game face on, your party face. When you’re getting dragged behind a boat on an inner tube, it’s hard to have much of a facade.”</p>
+                    </figcaption>
+                </div>
+                <!-- end news-post -->
+            </div>
+            <!-- end col-12 -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end news -->
+</main>
+
+
+{% endblock %}

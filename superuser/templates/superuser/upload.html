@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Upload to Cloudinary</title>
+</head>
+<body>
+
+  <input type="file" id="video-file" accept="video/*">
+  <button onclick="uploadVideo()">Upload Video</button>
+
+  <script>
+    async function uploadVideo() {
+      const videoFile = document.getElementById('video-file').files[0];
+      
+      if (videoFile) {
+        const cloudName = 'bloody123'; // Replace with your Cloudinary cloud name
+        const url = `https://api.cloudinary.com/v1_1/${cloudName}/video/upload`;
+
+        const formData = new FormData();
+        formData.append('file', videoFile);
+        formData.append('upload_preset', 'inventory_system'); // Replace with your Cloudinary upload preset
+
+        try {
+          const response = await fetch(url, {
+            method: 'POST',
+            body: formData
+          });
+
+          if (response.ok) {
+            const data = await response.json();
+            console.log(data['url'])
+          } else {
+            console.error('Error uploading video:', response.statusText);
+          }
+        } catch (error) {
+          console.error('Error uploading video:', error);
+        }
+      } else {
+        console.error('No video file selected.');
+      }
+    }
+  </script>
+
+</body>
+</html>

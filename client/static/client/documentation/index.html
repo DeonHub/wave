@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Wave Documentation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="themezinho">
+
+<!-- Le styles -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+<style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+</head>
+
+<body data-spy="scroll" id="top">
+
+<!-- Documentation Navbar -->
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="#"><img src="../images/logo.png" alt="Image" style="height:23px;"></a> <!-- TIP: Change this for the name of your file -->
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li><a href="#top" class="active">Top</a></li>
+          <li><a href="#markup">Markup</a></li>
+          <li><a href="#styles">Styles</a></li>
+          <li><a href="#javascript">JavaScript</a></li>
+          <li><a href="#psd">Photoshop</a></li>
+          <li><a href="#credits">Credits</a></li>
+          <li><a href="mailto:katmerayt@yahoo.com" >Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of Navbar --> 
+
+<!-- Main Container Beginning -->
+
+<div class="container">
+  <div class="masthead">
+    <h1>Wave Documentation</h1>
+    <p class="marketing-byline">We made another html template documentation with &hearts; by <a href="http://themeforest.net/user/themezinho">themezinho</a></p>
+    <div style="width:100%; float:left; text-align:center; margin:30px 0;"><img src="../images/demo1.jpg" alt="Image"></div>
+    <p>Wave creative agency & freelancer portfolio theme will fit all kind of
+digital purposes. Also amazing css animations makes item more
+attractive and unique.
+ </p>
+  </div>
+  <!-- masthead -->
+  
+  <div id="intro">
+    <p class="highlight hero-unit">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/tema_ormanlari">here</a>. Thanks so much!</p>
+  </div>
+  <!-- intro -->
+  
+  <section id="markup">
+    <div class="page-header">
+      <h1>Markup <small>Markup customization and highlights</small></h1>
+    </div>
+    <ul>
+      <li>Revolution slider (SAVE $14)</li>
+      <li>Amazing Unique design</li>
+      <li>Responsive</li>
+      <li>Bootstrap Framework</li>
+      <li>Valid HTML5 - CSS3 files</li>
+      <li>Based on Bootstrap 3.x</li>
+      <li>Amazing fullscreen navigation</li>
+      <li>Flowless CSS transition</li>
+      <li>Fancybox & Bootstrap Modals</li>
+      <li>Cross browsers support</li>
+      <li>Retina ready</li>
+      <li>Parallax backgrounds</li>
+      <li>Video supported</li>
+      <li>Styled Google Maps</li>
+      <li>Google fonts</li>
+      <li>Over 100+ font icons</li>
+      <li>Free quick support</li>
+    </ul>
+    <p>This theme is a builted on bootstrap framework with four columns. All of the information within the main content area is nested within a 'section'. </p>
+    <hr />
+    <div class="row">
+      <div class="span3">
+        <h3>General Markup</h3>
+        <p> The general template structure is the same throughout the template. Here is the general structure.</p>
+      </div>
+      <div class="span9">
+        <pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+&lt;title&gt;Wave | Agency & Freelancer Portfolio&lt;/title&gt;
+&lt;meta name="author" content="Themezinho"&gt;
+&lt;meta name="description" content="Agency & Freelancer Portfolio HTML Template"&gt;
+&lt;meta name="keywords" content="wave, creatve, portfolio, html, template, carousel, theme, agency, html5"&gt;
+
+&lt;!-- SOCIAL MEDIA META --&gt;
+&lt;meta property="og:description" content="Wave | Agency & Freelancer Portfolio"&gt;
+&lt;meta property="og:image" content="http://www.acrocapoeira.com/wave/preview.png"&gt;
+&lt;meta property="og:site_name" content="WAVE"&gt;
+&lt;meta property="og:title" content="WAVE"&gt;
+&lt;meta property="og:type" content="website"&gt;
+&lt;meta property="og:url" content="http://www.acrocapoeira.com/wave"&gt;
+
+&lt;!-- TWITTER META --&gt;
+&lt;meta name="twitter:card" content="summary"&gt;
+&lt;meta name="twitter:site" content="@WAVE"&gt;
+&lt;meta name="twitter:creator" content="@WAVE"&gt;
+&lt;meta name="twitter:title" content="WAVE"&gt;
+&lt;meta name="twitter:description" content="Wave | Agency & Freelancer Portfolio"&gt;
+&lt;meta name="twitter:image" content="http://www.acrocapoeira.com/wave/preview.png"&gt;
+
+&lt;!-- FAVICON FILES --&gt;
+&lt;link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144"&gt;
+&lt;link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114"&gt;
+&lt;link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72"&gt;
+&lt;link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed"&gt;
+&lt;link href="ico/favicon.png" rel="shortcut icon"&gt;
+
+&lt;!-- CSS FILES --&gt;
+&lt;link href="css/main.css" rel="stylesheet"&gt;
+
+&lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --&gt;
+&lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt;
+&lt;!--[if lt IE 9]&gt;
+      &lt;script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"&gt;&lt;/script&gt;
+      &lt;script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+&lt;/head&gt;
+&lt;body&gt;
+content goes here
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="span3">
+        <h3>How to edit link hover color</h3>
+        <p>It is very easy to change main color of ghost link</p>
+      </div>
+      <div class="span9">
+        <pre class="prettyprint linenums">
+/* LINKS */
+a{color:#1d1d1d;}
+a{-webkit-transition: .25s ease-in-out;-moz-transition: .25s ease-in-out;-ms-transition: .25s ease-in-out; -o-transition: .25s ease-in-out; transition: .25s ease-in-out;}
+a:hover{text-decoration:underline;}
+a:focus{text-decoration:none;}
+</pre>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="span3">
+        <h3>Change Main Title</h3>
+        <p>Here is the css style for site general title typography.</p>
+      </div>
+      <div class="span9">
+        <pre class="prettyprint linenums">
+/* TITLE BOX */
+.title-box{ width:100%; float:left; text-align:center; margin-bottom:40px;}
+.title-box h2{font-size:90px; font-family:jaapokki; margin:0;}
+.title-box h5{font-size:12px; font-weight:800; letter-spacing:2px; text-transform:uppercase;}
+.title-box .shape{font-family:jaapokki; font-size:30px; margin:40px 0; color:#ee3643;}
+</pre>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="span3">
+        <h3>Edit loading and page transition</h3>
+        <p>Here is the css style for loading elements and classes.</p>
+      </div>
+      <div class="span9">
+        <pre class="prettyprint linenums">
+        /* LOADING */
+.loading{ width:100%; height:100%; position:fixed; left:0; top:0; background:#1d1d1d; z-index:9999;}
+.loading .loader{ width:100%; height:100%; float:left; text-align:center; position:relative;}
+.loading .loading-image{ position:absolute; left:50%; margin-left:-40px; top:50%; margin-top:-40px; width:80px; height:80px;}
+.loading .loading-image.dissappear{ top:44%; opacity:0; -webkit-transition: .35s ease-in-out; -moz-transition: .35s ease-in-out; -ms-transition: .35s ease-in-out; -o-transition: .35s ease-in-out; transition: .35s ease-in-out; transition-delay: 0.30s;}
+.loading .loading-image img{ height:80px;}
+.loading .loading-text{ width:100%; float:left; position:absolute; left:0; top:51%; text-align:center; color:#fff; font-size:12px; font-weight:700; letter-spacing:1px;}
+.loading .loading-text.dissappear{ top:44%; opacity:0; -webkit-transition: .45s ease-in-out; -moz-transition: .45s ease-in-out; -ms-transition: .45s ease-in-out; -o-transition: .45s ease-in-out; transition: .45s ease-in-out; transition-delay: 0.40s;}
+.loading-text-dissappear{margin-top:-140px; -webkit-transition: .35s ease-in-out; -moz-transition: .35s ease-in-out; -ms-transition: .35s ease-in-out; -o-transition: .35s ease-in-out; transition: .35s ease-in-out;}
+.loading .loader{ display:inline-block; margin-top:10px; -moz-animation: fadeInUp 0.2s forwards; -webkit-animation: fadeInUp 0.2s  forwards; -o-animation: fadeInUp 0.2s forwards; animation: fadeInUp 0.2s forwards;}
+.loading .loader-hide{  -moz-animation: fadeInOut 0.2s forwards;  -webkit-animation: fadeInOut 0.2s  forwards;  -o-animation: fadeInOut 0.2s forwards; animation: fadeInOut 0.2s forwards;}
+.fade-out{ opacity:0; visibility:hidden; -webkit-transition: .55s ease-in-out; -moz-transition: .55s ease-in-out; -ms-transition: .55s ease-in-out; -o-transition: .55s ease-in-out; transition: .55s ease-in-out; transition-delay: 1s;}
+
+</pre>
+      </div>
+    </div>
+  </section>
+  <!-- Markup -->
+  
+  <section id="styles">
+    <div class="page-header">
+      <h1>Styles <small>Styles customization and highlights</small></h1>
+    </div>
+    <div class="row">
+      <div class="span3">
+        <h3>Stylesheets</h3>
+        <p>Here's a list of the stylesheet files I'm using with this template, you can find more information opening each file:</p>
+      </div>
+      <div class="span9">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>File Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>animate.css</code></td>
+              <td>For other animations and progress bar</td>
+            </tr>
+            <tr>
+              <td><code>bootstrap-slider.css</code></td>
+              <td>Bootstrap price range scroll</td>
+            </tr>
+            <tr>
+              <td><code>bootstrap.css</code></td>
+              <td>Detault bootstrap css file</td>
+            </tr>
+            <tr>
+              <td><code>bootstrap.min.css</code></td>
+              <td>Detault bootstrap min css file</td>
+            </tr>
+            <tr>
+              <td><code>ionicons.css</code></td>
+              <td>ION font icons</td>
+            </tr>
+            <tr>
+              <td><code>jquery.fancybox.css</code></td>
+              <td>Litebox plug-in css</td>
+            </tr>
+            <tr>
+              <td><code>main.css</code></td>
+              <td>All the css files included here</td>
+            </tr>
+            <tr>
+              <td><code>owl.carousel.css</code></td>
+              <td>OWL Carousel plug-in css</td>
+            </tr>
+            <tr>
+              <td><code>settings.css</code></td>
+              <td>Customized Rev Slider css</td>
+            </tr>
+            <tr>
+              <td><code>style.css</code></td>
+              <td>Template main css</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="span3">
+        <h3>Table of contents </h3>
+        <p>The second file contains all of the specific stylings for the page. The file is separated into sections using:</p>
+      </div>
+      <div class="span9">
+        <pre class="prettyprint linenums">
+===== TABLE OF CONTENTS =====
+
+	1. Body
+		1.1 Elements of body
+		1.2 Google Fonts
+		1.3 Links
+		1.4 Customized html elements
+		1.5 Form Elements
+		1.6 Table Middle
+		1.7 Transition Overlay
+		1.8 Loading
+		1.9 Sections
+		
+		
+	2. Showcase
+		2.1 Elements of showcase
+		2.2 Headlines
+		2.3 Masonry portfolio grids
+		2.4 Showcase thumb bg colors
+		
+		
+	3. Navbar
+		3.1 Elements of navbar
+		3.2 Transition
+		3.3 Logo
+		3.4 Navbar show
+		
+		
+	4. Slider
+		4.1 Elements of slider
+		4.2 Revolation Slider
+		4.3 Headlines
+		
+		
+	5. Hamburger Menu
+		5.1 Elements of hamburger menu
+		5.2 Transitions
+		5.3 Spans
+		5.4 Transform
+	
+		
+	6. Litebox Navigation
+		6.1 Elements of navigation
+		6.2 Transitions
+		6.3 Video backogrunds
+		6.4 Nav
+		
+		
+	7. Slider
+		7.1 Elements of slider
+		7.2 Inner
+		7.3 Headlines
+		
+		
+	8. Quote Bar
+		8.1 Elements of Quote
+		8.2 Headlines
+		8.3 Link
+		
+		
+	9. Internal Header
+		9.1 Elements of Int-Heaer
+		9.2 Headlines
+		9.3 Hero backgrounds
+		9.4 Transition
+		
+		
+	10. Home Features
+		10.1 Elements of features
+		10.2 Icons
+		10.3 Headlines
+		
+		
+	11. News
+		11.1 Elements of news
+		11.2 News image
+		11.3 Headlines
+		
+		
+	12. Title Box
+		11.1 Elements of title box
+		11.2 Headlines
+		11.3 Shape
+		
+		
+	13. About Us
+		13.1 Elements of about us
+		13.2 Headlines
+		13.3 Paragraph
+		13.4 Images
+		
+		
+	14. About Wave
+		14.1 Elements of about wave
+		14.2 Headlines
+		14.3 Paragraph
+		14.4 Images
+ 		
+		
+	15. Quote
+		15.1 Elements of quote
+		15.2 Colummns
+		15.3 Headlines
+		15.4 Blockquote
+		15.5 Background Image
+		
+		
+	16. Google Maps
+		16.1 Elements of maps 
+		16.2 Map Pin
+		
+		
+	17. Contact Info
+		17.1 Elements of contact info
+		17.2 Headlines
+		17.3 Images
+		17.4 Paragraph
+		
+	
+	18. Contact Form
+		18.1 Elements of contact form
+		18.2 Labels
+		18.3 Inputs
+		18.4 Form
+		18.5 Alerts
+		
+		
+	19. Career 
+		19.1 Elements of career
+		19.2 Headlines
+		19.3 Paragraph
+		19.4 Resume form
+		19.5 Form inputs
+		
+		
+	20. Wave Awards
+		20.1 Elements of wave awards
+		20.2 Headlines
+		20.3 Paragraph
+		20.4 Images
+		
+		
+	21. Features List
+		21.1 Elements of features list
+		21.2 List
+		
+		
+	22. Services
+		22.1 Elements of services
+		22.2 Icons
+		22.3 Headlines
+		22.4 Paragraph
+		22.5 Spacing
+		
+		
+	23. Services List
+		23.1 Elements of services list
+		23.2 Headlines
+		23.3 Paragraph
+		23.4 List
+		
+		
+	24. Project Detail
+		24.1 Elements of project detail
+		24.2 Headlines
+		24.3 Paragraph
+		24.4 Spacing
+		
+		
+	25. Process
+		25.1 Elements of process
+		25.2 Headlines
+		25.3 Video background
+		25.4 Numbers
+		25.5 Paragraph
+		
+		
+	26. Wave Things
+		26.1 Elements of wave things
+		26.2 Headlines
+		26.3 Paragraph
+		
+		
+	27. Logos
+		27.1 Elements of logos
+		27.2 Headlines
+		27.3 Paragraph
+		27.4 List
+		27.5 Images
+		
+		
+	28. Team Members
+		28.1 Elements of team members
+		28.2 Transitions
+		28.3 Images
+		28.4 Headlines
+		
+	
+	29. Footer
+		29.1 Elements of footer
+		29.2 Headlines
+		29.3 Logo
+		29.4 Subfooter 
+		29.5 Footer Menu
+		
+	30. Responsive Fixes
+		30.1 Tablet Fixes
+		20.2 Mobile Fixes
+
+					</pre>
+      </div>
+    </div>
+  </section>
+  <!-- Styles -->
+  
+  <section id="javascript">
+    <div class="page-header">
+      <h1>JavaScript <small>JavaScript customization and highlights</small></h1>
+    </div>
+    <div class="row">
+      <div class="span3">
+        <h3>JavaScript Files</h3>
+        <p>This is the list of all the jquery files are we used for our theme. </p>
+      </div>
+      <div class="span9">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Tag</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>bootstrap-slider.js</code></td>
+              <td>Price range plug-in</td>
+            </tr>
+            <tr>
+              <td><code>bootstrap.js</code></td>
+              <td>Bootstrap main framework</td>
+            </tr>
+            <tr>
+              <td><code>bootstrap-min.js</code></td>
+              <td>Bootstrap min</td>
+            </tr>
+            <tr>
+              <td><code>contact-form.js</code></td>
+              <td>Ajax - php contact form</td>
+            </tr>
+            <tr>
+              <td><code>counter.js</code></td>
+              <td>Counting numbers plug-in</td>
+            </tr>
+            <tr>
+              <td><code>google-maps.js</code></td>
+              <td>Styled Google Maps </td>
+            </tr>
+            <tr>
+              <td><code>isotope.min.js</code></td>
+              <td>Portfolio filter</td>
+            </tr>
+            <tr>
+              <td><code>jquery.form.js</code></td>
+              <td>Default jquery form plugin</td>
+            </tr>
+            <tr>
+              <td><code>jquery.min.js</code></td>
+              <td>jQuery library</td>
+            </tr>
+            <tr>
+              <td><code>jquery.stellar.js</code></td>
+              <td>Parallax backgrounds - elements</td>
+            </tr>
+            <tr>
+              <td><code>jquery.themepunch.revolution.min.js</code></td>
+              <td>Revolution Slider plug-in</td>
+            </tr>
+            <tr>
+              <td><code>jquery.themepunch.tools.min.js</code></td>
+              <td>Revolution Slider tools plug-in</td>
+            </tr>
+            <tr>
+              <td><code>jquery.validate.min.js</code></td>
+              <td>Jquery validation plug-in</td>
+            </tr>
+            <tr>
+              <td><code>masonry.js</code></td>
+              <td>Masonry grid plug-in</td>
+            </tr>
+            <tr>
+              <td><code>npm.js</code></td>
+              <td>Bootstrap extention plug-in</td>
+            </tr>
+            <tr>
+              <td><code>owl.carousel.js</code></td>
+              <td>OWL Carousel jquery</td>
+            </tr>
+            <tr>
+              <td><code>qty-increase.js</code></td>
+              <td>Cart quantity increase plug-in</td>
+            </tr>
+            <tr>
+              <td><code>scripts.js</code></td>
+              <td>All the plug-ins initializing </td>
+            </tr>
+            <tr>
+              <td><code>settings.js</code></td>
+              <td>Revolution Slider setting jquery</td>
+            </tr>
+            <tr>
+              <td><code>waypoints.min.js</code></td>
+              <td>Scrolling to top jquery</td>
+            </tr>
+            <tr>
+              <td><code>wow.js</code></td>
+              <td>Scroll animation load plug-in</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="span3">
+        <h3>Main typewriter effect</h3>
+        <p>If you want to change the texts of header typewriter animation, open up the file <code> scripts.js </code> and change the following code: </p>
+      </div>
+      <div class="span9">
+        <pre class="prettyprint js linenums:103">
+	// Counter for coming soon
+		$("#countdown").countdown({
+			date: "8 September 2020 09:00:00", // Change this to your desired date to countdown to
+			format: "on"
+		});
+        
+	// Counter script
+		$('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+
+	// Page transition
+		$('.transition').on('click', function(e) {
+		$('.transition-overlay').toggleClass("show");
+		});
+			
+			
+		// Transition delay
+		$('.transition').click(function (e) {
+			e.preventDefault();                  
+			var goTo = this.getAttribute("href"); 
+			 
+	
+		setTimeout(function(){
+			window.location = goTo;
+			},1000);       
+			});
+</pre>
+      </div>
+    </div>
+    <div class="page-header">
+      <h1>Ajax contact form <small>Contact form customization and highlights</small></h1>
+    </div>
+    <div class="row">
+      <div class="span3">
+        <h3>About contact form</h3>
+        <p>ajax contact form is very easy to setup , open up the file <code> process.php </code> and change the your@domain.com part.</p>
+      </div>
+      <div class="span9">
+        <pre class="prettyprint js linenums:103">
+< ?php
+
+    $to = "your@domain.com";
+    $from = $_REQUEST['email'];
+    $name = $_REQUEST['name'];
+	$subject = $_REQUEST['subject'];
+    $headers = "From: $from";
+    
+
+    $fields = array();
+    $fields{"name"} = "Name";
+    $fields{"email"} = "E-mail";
+    $fields{"subject"} = "Subject";
+    $fields{"message"} = "Message";
+
+    $body = "Here is the message from conceito:\n\n"; foreach($fields as $a => $b){   $body .= sprintf("%20s: %s\n",$b,$_REQUEST[$a]); }
+
+    $send = mail($to, $subject, $body, $headers);
+
+? >
+
+</pre>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span3">
+        <h3>Error messages</h3>
+        <p>Also it is easy to change contact form messages.</p>
+      </div>
+      <div class="span9">
+        <pre class="prettyprint js linenums:103">
+&lt;div id="success"&gt;
+
+         &lt;p&gt;Your message was sent successfully! We will be in touch as soon as we can.&lt;/p&gt;
+       &lt;/div&gt;
+        &lt;div id="error"&gt;
+          &lt;p&gt;Something went wrong, try refreshing and submitting the form again.&lt;/p&gt;
+        &lt;/div&gt;
+
+</pre>
+      </div>
+    </div>
+  </section>
+  <!-- JavaScript -->
+  
+  <section id="psd">
+    <div class="page-header">
+      <h1>Photoshop Files <small>Photoshop customization and highlights</small></h1>
+    </div>
+    <p>There is no included psd file with this item:</p>
+  </section>
+  <!-- Photoshop -->
+  
+  <section id="credits">
+    <div class="page-header">
+      <h1>Credits Files <small>Some of your credits and sources</small></h1>
+    </div>
+    <p>I've used the following images, icons or other files as listed.</p>
+    <h3>JavaScript</h3>
+    <ol>
+      <li><a href="#">Revolution Slider</a></li>
+      <li><a href="#">Bootstrap</a></li>
+      <li><a href="#">Isotope</a> </li>
+      <li><a href="#">Fancybox</a></li>
+      <li><a href="#">Stellar</a></li>
+      <li><a href="#">Waypoints</a> </li>
+      <li><a href="#">Counter Up</a></li>
+      <li><a href="#">OWL Carousel</a></li>
+      <li><a href="#">Qty Increase</a></li>
+      <li><a href="#">Reveal Animations WOW</a></li>
+    </ol>
+    <h3>Images</h3>
+    <ol>
+      <li><a href="http://thestocks.im/">http://thestocks.im/</a> <small>&mdash; Some of images we used from here </small></li>
+      <li><a href="http://www.shutterstock.com/">http://www.shutterstock.com/</a> <small>&mdash; Some of images we used from here </small></li>
+    </ol>
+  </section>
+  <!-- Credits -->
+  
+  <hr />
+  <div class="goodbye">
+    <p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+  </div>
+  <hr />
+  <footer>
+    <p>&copy; Company 2015 - Themezinho</p>
+  </footer>
+</div>
+<!-- /container --> 
+
+<!-- Le javascript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="assets/js/jquery.js"></script> 
+<script src="assets/js/scripts.js"></script> 
+<script src="assets/js/google-code-prettify/prettify.js"></script> 
+<script src="assets/js/bootstrap-transition.js"></script> 
+<script src="assets/js/bootstrap-alert.js"></script> 
+<script src="assets/js/bootstrap-modal.js"></script> 
+<script src="assets/js/bootstrap-dropdown.js"></script> 
+<script src="assets/js/bootstrap-scrollspy.js"></script> 
+<script src="assets/js/bootstrap-tab.js"></script> 
+<script src="assets/js/bootstrap-tooltip.js"></script> 
+<script src="assets/js/bootstrap-popover.js"></script> 
+<script src="assets/js/bootstrap-button.js"></script> 
+<script src="assets/js/bootstrap-collapse.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+{% extends 'client/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<section class="int-header hero4">
+  <div class="table">
+    <div class="inner">
+      <div class="container">
+        <h3>wave news</h3>
+        <p>Drop by for a coffee or leave us a message using contact form</p>
+        <img src="{% static 'client/images/icon-mouse.png' %}" alt="Image"> </div>
+      <!-- end container --> 
+    </div>
+    <!-- end inner --> 
+  </div>
+  <!-- end table --> 
+</section>
+<!-- end int-header -->
+<main>
+  <section class="news">
+  	<div class="container">
+    	<div class="row">
+
+        	<div class="col-xs-12">
+
+            	<div class="col-xs-4 news-post">
+                	<figure><img src="{% static 'client/images/news1.jpg' %}" alt="Image"></figure>
+                    <figcaption>
+                    <small>16TH OCTOBER 2015</small>
+                    	<h3><a href="{% url 'client:news_detail' %}">​Slack x Harvest</a></h3>
+                        <p>Introducing a full Harvest tracking and reporting tool inside Slack.</p>
+                    </figcaption>
+                </div>
+
+                <!-- end news-post -->
+                <div class="col-xs-4  news-post">
+                	<figure><img src="{% static 'client/images/news2.jpg' %}" alt="Image"></figure>
+                    <figcaption>
+                    <small>9TH MARCH 2015</small>
+                    	<h3><a href="{% url 'client:news_detail' %}">Awwwards are ffffffun.</a></h3>
+                        <p>Our 2nd Awwward in two months, for Savse Smoothies. Thanks internet.</p>
+                    </figcaption>
+                </div>
+                <!-- end news-post -->
+                
+                <div class="col-xs-4  news-post">
+                	<figure><img src="{% static 'client/images/news3.jpg' %}" alt="Image"></figure>
+                    <figcaption>
+                    <small>21ST MAY 2015</small>
+                    	<h3><a href="{% url 'client:news_detail' %}">Fixed up. Looking sharp</a></h3>
+                        <p>Everybody says the digital environment is changing brands radically.</p>
+                    </figcaption>
+                </div>
+                <!-- end news-post -->
+            </div>
+            <!-- end col-12 -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end news -->
+</main>
+
+
+{% endblock %}
+
+
+{% comment %} {% for blog in blogs %}
+<div class="news-post">
+    <figure><img src="{{ blog.blog_file.url }}" alt="Image"></figure>
+      <figcaption>
+      <small class="text-uppercase">{{ blog.date_created|date:'jS F, Y' }}</small>
+        <h3><a href="{% url 'client:news_detail' %}">{{ blog.heading }}</a></h3>
+          <p>{{ blog.subheading }}</p>
+      </figcaption>
+  </div>
+{% endfor %}     {% endcomment %}
