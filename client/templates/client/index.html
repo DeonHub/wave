@@ -318,11 +318,10 @@
       <div class="table">
         <div class="inner">
           <blockquote>Start your brands journey to success with a free consultation</blockquote>
-          <a href="{% url 'client:contact' %}">
-            <button class="btn btn-outline-success text-bold">
+
+            <button class="btn btn-outline-success" id="book">
               Book A Call
             </button>
-          </a>
 
         </div>
         <!-- end inner -->
@@ -364,3 +363,13 @@
 
 {% endblock %}
 
+{% block script %}
+<script>
+
+  document.getElementById("book").addEventListener("click", function(){
+    window.location.href = "{% url 'client:contact' %}";
+  });
+
+</script>
+
+{% endblock script %}
