@@ -12,7 +12,7 @@
 
           <!-- start of banner 1 -->
          <li data-transition="scaledownfromtop" data-masterspeed="700"> 
-            <img src="{% static 'client/images/Nickel1.jpg' %}" alt="Banner 1">
+            <img src="{% static 'client/images/graphix.jpg' %}" alt="Banner 1">
             <div class="tp-caption" 
                 data-x="center" 
                 data-y="center" 
@@ -24,8 +24,9 @@
                 data-elementdelay="0.1" 
                 data-endelementdelay="0.1" 
                 data-end="4700" 
-                data-endspeed="300">
-              <h2 class="text-uppercase banner-heading">Effectiveness through creative excellence.</h2>
+                data-endspeed="300"
+                >
+              <h2 class="text-uppercase">Effectiveness through <br> creative excellence.</h2>
             </div>
             <div class="tp-caption" 
                 data-x="center" 
@@ -41,7 +42,7 @@
                 data-endelementdelay="0.1" 
                 data-end="5000" 
                 data-endspeed="300">
-              <h5 class="text-uppercase">Nickel Waves excels in creative problem-solving, crafting integrated campaigns and business design to establish meaningful connections and deliver impactful results.</h5>
+              <h5 class="">Nickel Waves excels in creative problem-solving, crafting integrated campaigns <br> and business design to establish meaningful connections and deliver impactful results.</h5>
             </div>
             <div class="tp-caption" 
               data-x="center" 
@@ -57,14 +58,18 @@
               data-endelementdelay="0.1" 
               data-end="5100" 
               data-endspeed="300"> 
-              <img src="{% static 'client/images/icon-mouse.png' %}" alt="Image"> 
+              {% comment %} <img src="{% static 'client/images/icon-mouse.png' %}" alt="Image">  {% endcomment %}
             </div>
           </li>
           <!-- end banner 1 -->
 
+
+
+
+          
           <!-- start of banner 2 -->
-          <li data-transition="scaledownfromtop" data-masterspeed="700"> 
-            <img src="{% static 'client/images/Nickel2.jpg' %}" alt="Banner 2">
+          <li data-transition="scaledownfromtop" data-masterspeed="700" class="close-space"> 
+            <img src="{% static 'client/images/Nickel5.jpg' %}" alt="Banner 2">
             <div class="tp-caption" 
                 data-x="center" 
                 data-y="center" 
@@ -77,7 +82,7 @@
                 data-endelementdelay="0.1" 
                 data-end="4700" 
                 data-endspeed="300">
-              <h2 class="text-uppercase">Free Expert Consultation</h2>
+              <h2 class="text-uppercase text-center banner-heading">Free Expert<br> Consultation</h2>
             </div>
             <div class="tp-caption" 
                 data-x="center" 
@@ -93,12 +98,12 @@
                 data-endelementdelay="0.1" 
                 data-end="5000" 
                 data-endspeed="300">
-              <h5 class="text-uppercase">Experience the impact of strategic creativity with a free consultation.</h5>
+              <h5 class="">Experience the impact of strategic creativity with a free consultation.</h5>
             </div>
-            <div class="tp-caption" 
+            <div class="buttons tp-caption"
               data-x="center" 
-              data-y="bottom" 
-              data-voffset="80"
+              data-y="center" 
+              data-voffset="180"
               data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
               data-speed="600" 
               data-start="1100" 
@@ -108,8 +113,25 @@
               data-elementdelay="0.05" 
               data-endelementdelay="0.1" 
               data-end="5100" 
+              data-endspeed="300"
+              >
+              <a href="{% url 'client:wave' %}"><button class="btn btn-outline-success mt-5">Get Started</button></a>
+            </div>
+            <div class="tp-caption" 
+              data-x="center" 
+              data-y="bottom" 
+              data-voffset="80"
+              data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+              data-speed="1100" 
+              data-start="1600" 
+              data-easing="Power3.easeInOut" 
+              data-splitin="none" 
+              data-splitout="none" 
+              data-elementdelay="0.05" 
+              data-endelementdelay="0.1" 
+              data-end="5100" 
               data-endspeed="300"> 
-              <img src="{% static 'client/images/icon-mouse.png' %}" alt="Image"> 
+              {% comment %} <img src="{% static 'client/images/icon-mouse.png' %}" alt="Image">  {% endcomment %}
             </div>
           </li>
           <!-- end banner 2 -->
@@ -129,7 +151,7 @@
                 data-endelementdelay="0.1" 
                 data-end="4700" 
                 data-endspeed="300">
-              <h2 class="text-uppercase">Creative and Purposeful Work</h2>
+              <h2 class="text-uppercase text-center banner-heading">Creative and <br> Purposeful Work</h2>
             </div>
             <div class="tp-caption" 
                 data-x="center" 
@@ -145,7 +167,24 @@
                 data-endelementdelay="0.1" 
                 data-end="5000" 
                 data-endspeed="300">
-              <h5 class="text-uppercase">Our goal is to create purposeful work that works for your audience and your business.</h5>
+              <h5 class="">Our goal is to create purposeful work that works for your audience and your business.</h5>
+            </div>
+            <div class="buttons tp-caption"
+              data-x="center" 
+              data-y="center" 
+              data-voffset="180"
+              data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+              data-speed="600" 
+              data-start="1100" 
+              data-easing="Power3.easeInOut" 
+              data-splitin="none" 
+              data-splitout="none" 
+              data-elementdelay="0.05" 
+              data-endelementdelay="0.1" 
+              data-end="5100" 
+              data-endspeed="300"
+              >
+              <a href="{% url 'client:showcase' %}"><button class="btn btn-outline-success mt-5">Learn More</button></a>
             </div>
             <div class="tp-caption" 
               data-x="center" 
@@ -161,7 +200,7 @@
               data-endelementdelay="0.1" 
               data-end="5100" 
               data-endspeed="300"> 
-              <img src="{% static 'client/images/icon-mouse.png' %}" alt="Image"> 
+              {% comment %} <img src="{% static 'client/images/icon-mouse.png' %}" alt="Image">  {% endcomment %}
             </div>
           </li>
           <!-- end banner 3 -->
@@ -279,9 +318,12 @@
       <div class="table">
         <div class="inner">
           <blockquote>Start your brands journey to success with a free consultation</blockquote>
-          <button class="">
-            Book a call
-          </button>
+          <a href="{% url 'client:contact' %}">
+            <button class="btn btn-outline-success text-bold">
+              Book A Call
+            </button>
+          </a>
+
         </div>
         <!-- end inner -->
       </div>

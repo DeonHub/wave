@@ -431,11 +431,11 @@ footer{ width:100%; float:left;}
 
 
 /* SLIDER */
-.slider{ width:100%; height:100%; background:#1d1d1d; float:left; position:relative; overflow:hidden; z-index:3; margin-top:400px;}
+.slider{ width:100%; height:100%; background:#000; float:left; position:relative; overflow:hidden; z-index:3; margin-top:400px;}
 .slider .slider-inner{ width:100%; height:100%; float:left; position:fixed;}
-.slider .banner { width:100%; height:100%; float:left; }
-.slider h2{font-size:100px; color:#fff; letter-spacing:20px;}
-.slider h5{font-size:20px; color:#fff; font-family:jaapokki; letter-spacing:5px;}
+.slider .banner { width:100%; height:100%; float:left; background:#000; }
+.slider h2{font-size:70px; color:#fff; font-family:jaapokki; margin-top: -10%; }
+.slider h5{font-size:18px; color:#fff; text-align: center; margin-top: -8%; }
 .slider .video-bg{ width:100%; height:100%; float:left; position:relative; overflow:hidden;}
 .slider .video-bg:after{content:''; width:100%; height:100%; position:absolute; left:0; top:0; background:rgba(238,54,67,0.8); z-index:2;}
 .slider .video-bg video{ width:100%; min-height:100%; float:left; position:absolute; left:0; top:0; z-index:1;}
@@ -452,7 +452,7 @@ footer{ width:100%; float:left;}
 .int-header.hero2{background:url(../images/Nickel1.jpg) center no-repeat #45d1c6; background-attachment:fixed;}
 .int-header.hero3{background:url(../images/cdx.jpg) center no-repeat #70b2ff; background-attachment:fixed;}
 .int-header.hero4{background:url(../images/hero4.gif) center no-repeat #82bcf0; background-attachment:fixed;}
-.int-header.hero5{background:url(../images/hero5.gif) center no-repeat #69af9a; background-attachment:fixed;}
+.int-header.hero5{background:url(../images/Nickel\ Logo1.png) center no-repeat #69af9a; background-attachment:fixed;}
 .int-header.hero6{background:url(../images/hero6.gif) center no-repeat #9e514d; background-attachment:fixed;}
 .goes-up{ margin:0; transition-duration: 1500ms; -webkit-transition-duration: 1500ms; transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1); -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1); transition-delay: 0.60s;}
 
@@ -460,7 +460,7 @@ footer{ width:100%; float:left;}
 
 /* NEWS */
 .news{ width:100%; float:left; margin:100px 0; text-align:center;}
-.news .news-post{ width:100%; float:left; margin-bottom:60px;}
+.news .news-post{ width:100%; margin-bottom:60px;}
 .news .news-post figure{ width:100%; max-width:700px; display:inline-block;}
 .news .news-post figure img{ width:100%;}
 .news .news-post figcaption{ width:100%; float:left; margin:20px 0;}
@@ -729,10 +729,10 @@ footer .sub-footer ul{ float:left; margin-top:20px;}
 }
 
 
-
 .banner-heading{
-	font-size: 10px;
+	margin-bottom: -30%;
 }
+
 
 .side-wave{
 	margin-top: 15%;

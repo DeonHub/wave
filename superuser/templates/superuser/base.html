@@ -11,8 +11,8 @@
 <link href="{% static 'client/ico/apple-touch-icon-114-precomposed.png' %}" rel="apple-touch-icon-precomposed" sizes="114x114">
 <link href="{% static 'client/ico/apple-touch-icon-72-precomposed.png' %}" rel="apple-touch-icon-precomposed" sizes="72x72">
 <link href="{% static 'client/ico/apple-touch-icon-57-precomposed.png' %}" rel="apple-touch-icon-precomposed">
-<link href="{% static 'client/ico/favicon.png' %}" rel="shortcut icon">
-<title>Wave | {{ page }}</title>
+<link href="{% static 'client/images/favicon.png' %}" rel="shortcut icon">
+<title>Nickelwaves | {{ page }}</title>
 
 <!--     Fonts and icons     -->
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -35,6 +35,10 @@
 
 <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
 
+{% block import %}
+
+{% endblock %}
+
 
 <style>
   {% block style %}
@@ -52,9 +56,8 @@
  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3  bg-gradient-dark" id="sidenav-main">
 
   <div class="sidenav-header">
-    {% comment %} <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i> {% endcomment %}
     <a class="navbar-brand m-0" href="{% url 'superuser:dashboard' %}" target="_blank">
-      <img src="{% static 'client/images/logo.png' %}" class="navbar-brand-img h-100 ml-5" style="margin-left:25%;" alt="main_logo">
+      <img src="{% static 'client/images/logo.png' %}" class="navbar-brand-img h-100 ml-5" style="margin-left:20%;" width="50%" height="100%" alt="main_logo">
     </a>
   </div>
 

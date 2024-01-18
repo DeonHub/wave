@@ -1,0 +1,52 @@
+{% extends 'superuser/base.html' %}
+{% load static %}
+
+{% block style %}
+.news{ width:100%; margin:100px 0 20px 100px; text-align:center;}
+.news .news-post{ width:100%; margin-bottom:60px;}
+.news .news-post figure{ width:100%; max-width:700px; display:inline-block;}
+.news .news-post figure img{ width:100%;}
+.news .news-post figcaption{ width:100%; margin:20px 0;}
+.news .news-post figcaption h3{ font-size:29px; font-weight:700; letter-spacing:2px; margin-top:0; font-family: 'Playfair Display', serif;}
+.news .news-post figcaption h3 a{ color:#000;}
+.news .news-post figcaption small{ font-size:11px; color:#999; letter-spacing:2px;}
+.news .news-post figcaption p {font-weight:300; letter-spacing:1px; padding:0 12%;}
+.news .news-post figcaption blockquote{ display:inline-block; font-family:'Playfair Display', serif; font-style:italic; font-size:20px; margin:20px 0;}
+
+{% endblock %}
+
+{% block content %}
+
+<main>
+  <section class="news mb-5">
+  	<div class="container">
+    	<div class="row">
+        	<div class="col-xs-12">
+            	<div class="news-post">
+                	<figure><img src="{{ blog.blog_file.url }}" alt="Image"></figure>
+                    <figcaption>
+                      <small class="text-uppercase">{{ blog.date_created|date:'jS F, Y' }}</small>
+                    	<h3>{{ blog.heading }}</h3>
+                        <p>{{ blog.subheading }}</p>
+                        <blockquote>
+                        </blockquote>
+                        <p>{{ blog.body }}</p>
+                    </figcaption>
+                </div>
+                <!-- end news-post -->
+            </div>
+            <!-- end col-12 -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+    <div class="text-center mb-5">
+      <a onclick="window.history.go(-1); return false;"><button type="button" class="btn bg-gradient-primary rounded-1 btn-sm mt-4 mb-0">Back</button></a>
+      <a href="{% url 'superuser:editBlog' id=blog.id %}"><button type="submit" id="submit" class="btn bg-gradient-success rounded-1 btn-sm mt-4 mb-0">Edit</button></a>
+    </div>
+  </section>
+  <!-- end news -->
+</main>
+
+
+{% endblock %}

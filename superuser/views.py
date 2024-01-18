@@ -23,8 +23,13 @@ def dashboard(request):
     template_name = 'superuser/dashboard.html'
     page = "Admin Dashboard"
 
+    total_images = Image.objects.all().count()
+    total_blogs = Blog.objects.all().count()
+
     return render(request, template_name, {
-        'page': page
+        'page': page,
+        'total_blogs': total_blogs,
+        'total_images': total_images
     })
 
 

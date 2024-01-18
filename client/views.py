@@ -1,5 +1,12 @@
 from django.shortcuts import render
 from superuser.models import *
+from django.core.mail import send_mail, EmailMessage
+from django.conf import settings
+import environ
+
+
+env = environ.Env()
+environ.Env.read_env()
 
 
 # Create your views here.
@@ -136,24 +143,18 @@ def news(request):
     })
 
 
-def news_detail(request):
+
+def news_detail(request, id, *args, **kwargs):
     template_name = 'client/news-detail.html'
+    page = "View Blog"
 
-    images = Image.objects.all()
-    videos = Video.objects.all()
-    banners = Image.objects.filter(banner=True)
-
-    if videos.count() > 0:
-        video = videos.first()
-    else:
-        video = None  
+    blog = Blog.objects.get(id=id)
 
     return render(request, template_name, {
-        'images': images,
-        'videos': videos,
-        'banners': banners,
-        'video': video
-    })
+        'page': page,
+        'blog': blog
+    }) 
+
 
 
 def work_detail(request):
@@ -179,21 +180,41 @@ def work_detail(request):
 def contact(request):
     template_name = 'client/contact.html'
 
-    images = Image.objects.all()
-    videos = Video.objects.all()
-    banners = Image.objects.filter(banner=True)
+    if request.method == 'POST':
 
-    if videos.count() > 0:
-        video = videos.first()
+        user_name = request.POST.get('name')
+        user_email = request.POST.get('email')
+        user_subject = request.POST.get('subject')
+        user_message = request.POST.get('message')
+
+        # Function to send mail to admin
+        subject = f'NEW CONTACT FORM ENTRY'
+        body = f"""
+                    A user contacted you through the contact form on your website.
+                    Find the details below:
+                    Name: { user_name }
+                    Email: { user_email} 
+                    Subject: { user_subject }
+                    Message: { user_message }
+
+                """
+        senders_mail = settings.EMAIL_HOST_USER
+        to_address = ['admin@nickelwaves.com ']
+
+        email = EmailMessage(subject, body, senders_mail, to_address)
+
+        try:
+            email.send()
+            # pass
+        except: 
+            print("Server error")
+            pass        
+
     else:
-        video = None  
+        return render(request, template_name, {
 
-    return render(request, template_name, {
-        'images': images,
-        'videos': videos,
-        'banners': banners,
-        'video': video
-    }) 
+        })
+
 
 
 def career(request):

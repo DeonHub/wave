@@ -49,7 +49,7 @@
                 {% csrf_token %}
                 <!-- CARD 1 -->
                 {% for blog in blogs %}
-                <div class="col" id="{{ video.id }}">
+                <div class="col" id="{{ blog.id }}">
                     <div class="rounded overflow-hidden shadow bg-white">
                     <a href="#"></a>
 
@@ -58,7 +58,7 @@
                     </div>
 
                     <div class="px-3 py-2 mb-auto">
-                       <a href="">
+                       <a href="{% url 'superuser:viewBlog' id=blog.id %}">
                         <p class="text-lg fw-bold text-dark transition-500 inline-block mb-2">{{ blog.heading }}</p>
                        </a>
                     </div>
