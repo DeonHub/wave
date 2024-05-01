@@ -327,7 +327,7 @@ footer{ width:100%; float:left;}
 .showcase .portfolio{ width:100%; float:left; margin-top:-158px;}
 .showcase .portfolio *{-webkit-transition: .15s ease-in-out;-moz-transition: .15s ease-in-out;-ms-transition: .15s ease-in-out; -o-transition: .15s ease-in-out; transition: .15s ease-in-out;}
 .showcase .portfolio-masonry{ width:100%; float:left; position:relative;}
-.showcase .portfolio-masonry li{ width:20%; float:left;}
+.showcase .portfolio-masonry li{ width:33%; float:left;}
 .showcase .portfolio-masonry li.double{ width:40%;}
 .showcase .portfolio-masonry li *{-webkit-transition: .25s ease-in-out;-moz-transition: .25s ease-in-out;-ms-transition: .25s ease-in-out; -o-transition: .25s ease-in-out; transition: .25s ease-in-out;}
 .showcase figure{ width:100%; float:left; position:relative;}
@@ -435,6 +435,7 @@ footer{ width:100%; float:left;}
 .slider{ width:100%; height:100%; background:#000; float:left; position:relative; overflow:hidden; z-index:3; margin-top:400px;}
 .slider .slider-inner{ width:100%; height:100%; float:left; position:fixed;}
 .slider .banner { width:100%; height:100%; float:left; background:#000; }
+.slider .banner img::after { background-color: rgba(0, 0, 0, 0.7); }
 .slider h2{font-size:70px; color:#fff; font-family:jaapokki; margin-top: -10%; }
 .slider h5{font-size:18px; color:#fff; text-align: center; margin-top: -8%; }
 .slider .video-bg{ width:100%; height:100%; float:left; position:relative; overflow:hidden;}
@@ -455,7 +456,7 @@ footer{ width:100%; float:left;}
 .int-header.hero4::before,
 .int-header.hero5::before,
 .int-header.hero6::before{content: "";position: absolute;top: 0;right: 0;bottom: 0;left: 0;background-color: rgba(0, 0, 0, 0.7); }
-.int-header.hero1{background:url(../images/artboard.jpg) center no-repeat #73d6ff; background-attachment:fixed; object-fit: contain;}
+.int-header.hero1{background:url(../images/Nickell.jpg) center no-repeat #73d6ff; background-attachment:fixed; object-fit: auto;}
 .int-header.hero2{background:url(../images/Nickel1.jpg) center no-repeat #45d1c6; background-attachment:fixed;}
 .int-header.hero3{background:url(../images/cdx.jpg) center no-repeat #70b2ff; background-attachment:fixed;}
 .int-header.hero4{background:url(../images/bottle.jpg) center no-repeat #82bcf0; background-attachment:fixed;}
@@ -463,6 +464,49 @@ footer{ width:100%; float:left;}
 .int-header.hero6{background:url(../images/hero6.gif) center no-repeat #9e514d; background-attachment:fixed;}
 .goes-up{ margin:0; transition-duration: 1500ms; -webkit-transition-duration: 1500ms; transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1); -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1); transition-delay: 0.60s;}
 
+
+
+.gallerybanner {
+	width:100%; 
+	height:100%;
+	position: relative;
+	z-index:3;
+	text-align: center;
+	color: white;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+  }
+
+   .hero1{background-image: url(../images/hand.png); }
+   .hero2{background-image: url(../images/student.jpg); }
+   .hero3{background-image: url(../images/woman.jpg); }
+   .hero4{background-image: url(../images/bottle.jpg); }
+
+
+   .hero1::before,
+   .hero2::before,
+   .hero3::before,
+   .hero4::before,
+   .hero5::before,
+   .hero6::before{content: "";position: absolute;top: 0;right: 0;bottom: 0;left: 0;background-color: rgba(0, 0, 0, 0.6); }
+  
+
+  .gallerybanner__content {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+  }
+
+  .gallerybanner h3{color:#fff; font-size:70px; font-family:jaapokki; margin:40px 0;}
+.gallerybanner p{font-size:18px; color:#fff; padding:0 30%; margin-bottom:50px;}
+  
 
 
 /* NEWS */
@@ -705,7 +749,7 @@ footer .sub-footer ul li a{ float:left; font-size:12px; font-weight:700; color:#
 @media only screen and (max-width: 989px), only screen and (max-device-width: 989px) {
 	
 .navigation{ background:url(../images/nav-bg-image.jpg) no-repeat; background-size:cover;}
-.showcase .portfolio-masonry li{ width:50% !important; padding:10px;}
+.showcase .portfolio-masonry li{ width:20% !important; padding:10px;}
 .services-list{ text-align:center;}
 .services-list h4:after{ left:50%; margin-left:-25px;}
 .services-list ul{ margin-top:0; margin-bottom:40px;}

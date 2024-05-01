@@ -4,33 +4,32 @@
 {% block content %}
 
 
-<section class="int-header hero4">
-  <div class="table">
-    <div class="inner">
-      <div class="container">
-        <h3>wave news</h3>
-        <p>Drop by for a coffee or leave us a message using contact form</p>
-        <img src="{% static 'client/images/icon-mouse.png' %}" alt="Image"> </div>
-      <!-- end container --> 
-    </div>
-    <!-- end inner --> 
-  </div>
-  <!-- end table --> 
+
+
+<section class="gallerybanner hero6" style="background-image: url('{{ blog.blog_file.url }}')">
+  
+	<div class="gallerybanner__content">
+		<div class="gallerybanner_title container">       
+      <h3>{{ blog.heading }}</h3>
+      <p>{{ blog.subheading }}</p>
+      <img src="{% static 'client/images/icon-mouse.png' %}" alt="Image"> </div>
+	</div>
 </section>
-<!-- end int-header -->
+
+
 <main>
   <section class="news">
   	<div class="container">
     	<div class="row">
         	<div class="col-xs-12">
             	<div class="news-post">
-                	<figure><img src="{{ blog.blog_file.url }}" alt="Image"></figure>
+                	{% comment %} <figure><img src="{{ blog.blog_file.url }}" alt="Image"></figure> {% endcomment %}
                     <figcaption>
-                      <small class="text-uppercase">{{ blog.date_created|date:'jS F, Y' }}</small>
-                    	<h3>{{ blog.heading }}</h3>
+                      <small class="text-uppercase mb-5" style="margin-bottom: 10%;">Posted On: {{ blog.date_created|date:'jS F, Y' }}</small><br><br><br>
+                    	{% comment %} <h3>{{ blog.heading }}</h3>
                         <p>{{ blog.subheading }}</p>
                         <blockquote>
-                        </blockquote>
+                        </blockquote> {% endcomment %}
                         <p>{{ blog.body }}</p>
                     </figcaption>
                 </div>

@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<section class="int-header hero2">
+{% comment %} <section class="int-header hero2">
   <div class="table">
     <div class="inner">
       <div class="container">
@@ -16,7 +16,18 @@
   </div>
   <!-- end table --> 
 </section>
-<!-- end int-header -->
+<!-- end int-header --> {% endcomment %}
+
+
+<section class="gallerybanner hero2">
+	<div class="gallerybanner__content">
+		<div class="gallerybanner_title container">       
+      <h3>About Us</h3>
+      <p>Our team has initiated several global endeavors to supplement our primary business and drive additional positive impact in the world.</p>
+      <img src="{% static 'client/images/icon-mouse.png' %}" alt="Image"> </div>
+	</div>
+</section>
+
 <main>
   <section class="wave-things">
     <div class="container">

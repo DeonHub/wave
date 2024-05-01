@@ -57,12 +57,12 @@
       <nav>
         <ul>
           <li><a href="{% url 'client:index' %}">HOME</a></li>
-          <li><a href="{% url 'client:showcase' %}">SHOWCASE</a></li>
-          <li><a href="{% url 'client:wave' %}" class="transition">WAVE</a></li>
+          <li><a href="{% url 'client:showcase' %}">OUR WORKS</a></li>
+          <li><a href="{% url 'client:wave' %}" class="transition">ABOUT US</a></li>
           <li><a href="{% url 'client:services' %}" class="transition">SERVICES</a></li>
-          <li><a href="{% url 'client:news' %}" class="transition">NEWS</a></li>
+          <li><a href="{% url 'client:news' %}" class="transition">BLOG</a></li>
           <li><a href="{% url 'client:contact' %}" class="transition">CONTACT</a></li>
-          <li><a href="{% url 'login:login' %}" class="transition">LOGIN</a></li>
+          {% comment %} <li><a href="{% url 'login:login' %}" class="transition">LOGIN</a></li> {% endcomment %}
         </ul>
       </nav>
       <span class="copyright">© 2024 Nickelwaves | Creative Waves, Endless Possibilites</span> </div>
@@ -74,7 +74,8 @@
 <nav class="navbar navbar-default" role="navigation">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12"> <a href="{% url 'client:index' %}"><img src="{% static 'client/images/logo.png' %}" alt="Image" width="100px" height="500px" class="logo"></a>
+      <div class="col-xs-12"> 
+        <a href="{% url 'client:index' %}"><img src="{% static 'client/images/logo.png' %}" alt="Image" class="logo"></a>
         <div class="hamburger-menu"> <span></span> <span></span> <span></span> <span></span> </div>
       </div>
       <!-- end col-12 --> 
