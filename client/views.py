@@ -202,8 +202,7 @@ def contact(request):
 
                 """
         senders_mail = settings.EMAIL_HOST_USER
-        # to_address = ['admin@nickelwaves.com ']
-        to_address = ['impraimgideon89@gmail.com']
+        to_address = ['admin@nickelwaves.com']
 
         email = EmailMessage(subject, body, senders_mail, to_address)
 
