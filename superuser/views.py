@@ -67,7 +67,7 @@ def addImage(request):
         try:
             image = Image.objects.create(image_name=image_name, image_file=image_file, banner=banner, heading=heading, subheading=subheading)
             image.save()
-            messages.success(request, 'Image added cuccessfully')
+            messages.success(request, 'Image added successfully')
             return HttpResponseRedirect(reverse('superuser:viewImages'))  
         except:
             messages.success(request, 'File size too large')
@@ -106,7 +106,8 @@ def editImage(request, id, **kwargs):
         
         except:
             messages.success(request, 'File size too large')
-            return HttpResponseRedirect(reverse('superuser:editImage', id)) 
+            return HttpResponseRedirect(reverse('superuser:editImage', kwargs={'id': id}))
+
            
     
     else:

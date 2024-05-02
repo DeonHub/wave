@@ -3,7 +3,10 @@ from superuser.models import *
 from django.core.mail import send_mail, EmailMessage
 from django.conf import settings
 import environ
-
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
+from django.urls import reverse
+from django.contrib import messages
+from django.shortcuts import redirect, render
 
 env = environ.Env()
 environ.Env.read_env()
@@ -199,7 +202,8 @@ def contact(request):
 
                 """
         senders_mail = settings.EMAIL_HOST_USER
-        to_address = ['admin@nickelwaves.com ']
+        # to_address = ['admin@nickelwaves.com ']
+        to_address = ['impraimgideon89@gmail.com']
 
         email = EmailMessage(subject, body, senders_mail, to_address)
 
@@ -208,7 +212,10 @@ def contact(request):
             # pass
         except: 
             print("Server error")
-            pass        
+            pass
+
+        messages.success(request, 'Contact details submitted successfully. We will get back to you shortly.')
+        return HttpResponseRedirect(reverse('client:contact'))          
 
     else:
         return render(request, template_name, {
