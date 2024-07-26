@@ -7,6 +7,7 @@ from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 from django.contrib import messages
 from django.shortcuts import redirect, render
+from datetime import datetime
 
 env = environ.Env()
 environ.Env.read_env()
@@ -18,19 +19,21 @@ def index(request):
     images = Image.objects.all()
     videos = Video.objects.all()
     banners = Image.objects.filter(banner=True)
+    current_year = datetime.now().year
 
     if videos.count() > 0:
         video = videos.first()
     else:
         video = None  
 
-
+ 
 
     return render(request, template_name, {
         'images': images,
         'videos': videos,
         'banners': banners,
-        'video': video
+        'video': video,
+        'current_year': current_year
     })
 
     
@@ -41,6 +44,7 @@ def index_top_menu(request):
     images = Image.objects.all()
     videos = Video.objects.all()
     banners = Image.objects.filter(banner=True)
+    current_year = datetime.now().year
 
     if videos.count() > 0:
         video = videos.first()
@@ -51,7 +55,8 @@ def index_top_menu(request):
         'images': images,
         'videos': videos,
         'banners': banners,
-        'video': video
+        'video': video,
+        'current_year': current_year
     })
 
 
@@ -61,6 +66,7 @@ def index_video(request):
     images = Image.objects.all()
     videos = Video.objects.all()
     banners = Image.objects.filter(banner=True)
+    current_year = datetime.now().year
 
     if videos.count() > 0:
         video = videos.first()
@@ -71,7 +77,8 @@ def index_video(request):
         'images': images,
         'videos': videos,
         'banners': banners,
-        'video': video
+        'video': video,
+        'current_year': current_year
     })
 
 
@@ -81,6 +88,7 @@ def showcase(request):
     images = Image.objects.all()
     videos = Video.objects.all()
     banners = Image.objects.filter(banner=True)
+    current_year = datetime.now().year
 
     if videos.count() > 0:
         video = videos.first()
@@ -91,7 +99,8 @@ def showcase(request):
         'images': images,
         'videos': videos,
         'banners': banners,
-        'video': video
+        'video': video,
+        'current_year': current_year
     })
 
 
@@ -101,6 +110,7 @@ def wave(request):
     images = Image.objects.all()
     videos = Video.objects.all()
     banners = Image.objects.filter(banner=True)
+    current_year = datetime.now().year
 
     if videos.count() > 0:
         video = videos.first()
@@ -112,7 +122,8 @@ def wave(request):
         'images': images,
         'videos': videos,
         'banners': banners,
-        'video': video
+        'video': video,
+        'current_year': current_year
     })
 
 
@@ -122,6 +133,7 @@ def services(request):
     images = Image.objects.all()
     videos = Video.objects.all()
     banners = Image.objects.filter(banner=True)
+    current_year = datetime.now().year
 
     if videos.count() > 0:
         video = videos.first()
@@ -132,7 +144,9 @@ def services(request):
         'images': images,
         'videos': videos,
         'banners': banners,
-        'video': video
+        'video': video,
+        'current_year': current_year
+
     })
 
 
@@ -140,9 +154,11 @@ def news(request):
     template_name = 'client/news.html'
 
     blogs = Blog.objects.all()
+    current_year = datetime.now().year
 
     return render(request, template_name, {
-        'blogs': blogs
+        'blogs': blogs,
+        'current_year': current_year
     })
 
 
@@ -152,10 +168,12 @@ def news_detail(request, id, *args, **kwargs):
     page = "View Blog"
 
     blog = Blog.objects.get(id=id)
+    current_year = datetime.now().year
 
     return render(request, template_name, {
         'page': page,
-        'blog': blog
+        'blog': blog,
+        'current_year': current_year
     }) 
 
 
@@ -166,6 +184,7 @@ def work_detail(request):
     images = Image.objects.all()
     videos = Video.objects.all()
     banners = Image.objects.filter(banner=True)
+    current_year = datetime.now().year
 
     if videos.count() > 0:
         video = videos.first()
@@ -176,12 +195,16 @@ def work_detail(request):
         'images': images,
         'videos': videos,
         'banners': banners,
-        'video': video
+        'video': video,
+        'current_year': current_year
     })
 
 
 def contact(request):
     template_name = 'client/contact.html'
+    current_year = datetime.now().year
+
+
 
     if request.method == 'POST':
 
@@ -218,7 +241,7 @@ def contact(request):
 
     else:
         return render(request, template_name, {
-
+        'current_year': current_year
         })
 
 
@@ -229,6 +252,7 @@ def career(request):
     images = Image.objects.all()
     videos = Video.objects.all()
     banners = Image.objects.filter(banner=True)
+    current_year = datetime.now().year
 
     if videos.count() > 0:
         video = videos.first()
@@ -239,7 +263,8 @@ def career(request):
         'images': images,
         'videos': videos,
         'banners': banners,
-        'video': video
+        'video': video,
+        'current_year': current_year
     })
 
 

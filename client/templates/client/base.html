@@ -57,15 +57,15 @@
       <nav>
         <ul>
           <li><a href="{% url 'client:index' %}">HOME</a></li>
-          <li><a href="{% url 'client:showcase' %}">OUR WORKS</a></li>
           <li><a href="{% url 'client:wave' %}" class="transition">ABOUT US</a></li>
+          <li><a href="{% url 'client:showcase' %}">OUR WORKS</a></li>
           <li><a href="{% url 'client:services' %}" class="transition">SERVICES</a></li>
           <li><a href="{% url 'client:news' %}" class="transition">BLOG</a></li>
           <li><a href="{% url 'client:contact' %}" class="transition">CONTACT</a></li>
           {% comment %} <li><a href="{% url 'login:login' %}" class="transition">LOGIN</a></li> {% endcomment %}
         </ul>
       </nav>
-      <span class="copyright">© 2024 Nickelwaves | Creative Waves, Endless Possibilites</span> </div>
+      <span class="copyright">© {{ current_year }} Nickelwaves | Creative Waves, Endless Possibilites</span> </div>
     <!-- end inner --> 
   </div>
   <!-- end table --> 
@@ -104,12 +104,12 @@
       </div>
       <!-- end col-12 -->
       <div class="col-xs-12">
-        <div class="sub-footer"> <span class="copyright">© 2024 Nickelwaves | Creative Waves, Endless Possibilites</span>
+        <div class="sub-footer"> <span class="copyright">© {{ current_year }} Nickelwaves | Creative Waves, Endless Possibilites</span>
           <ul>
             <li> <a href="{% url 'client:contact' %}">Contact Us</a></li>
-            <li> <a href="{% url 'client:career' %}">Career</a></li>
-            <li> <a href="http://www.dribble.com" target="_blank">Instagram</a></li>
-            <li> <a href="http://www.behance.net" target="_blank">LinkedIn</a></li>
+            <li> <a href="{% url 'client:news' %}">Blog</a></li>
+            <li> <a href="https://web.facebook.com/profile.php?id=100075774083134" target="_blank">Facebook</a></li>
+            <li> <a href="https://www.instagram.com/nickelwaves?igsh=NjE0ZTQ4YzN5cWdw" target="_blank">Instagram</a></li>
           </ul>
         </div>
         <!-- end sub-footer --> 
